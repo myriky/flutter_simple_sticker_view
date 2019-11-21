@@ -1,0 +1,26 @@
+name: flutter_simple_sticker_view_example
+description: Demonstrates how to use the flutter_simple_sticker_view plugin.
+publish_to: "none"
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  image_gallery_saver:
+  permission_handler:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_simple_sticker_view:
+    path: ../
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/

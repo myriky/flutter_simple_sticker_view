@@ -1,0 +1,28 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_simple_sticker_view (0.0.1):
+    - Flutter
+  - image_gallery_saver (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - flutter_simple_sticker_view (from `.symlinks/plugins/flutter_simple_sticker_view/ios`)
+  - image_gallery_saver (from `.symlinks/plugins/image_gallery_saver/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  flutter_simple_sticker_view:
+    :path: ".symlinks/plugins/flutter_simple_sticker_view/ios"
+  image_gallery_saver:
+    :path: ".symlinks/plugins/image_gallery_saver/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_simple_sticker_view: 96b82ea4dd39fe346951a74266c09e1b0f21b5ea
+  image_gallery_saver: 6d422f8c5b40f5b57e8c3298d1fa6b1653c088c0
+
+PODFILE CHECKSUM: b6a0a141693093b304368d08511b46cf3d1d0ac5
+
+COCOAPODS: 1.6.1
