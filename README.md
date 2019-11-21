@@ -5,7 +5,7 @@ Flutter plugin for attach stickers on image, as you want. scalable, movable. att
 <img src="https://img.shields.io/pub/v/flutter_simple_sticker_view.svg" />
 <img src="https://img.shields.io/github/license/myriky/flutter_simple_sticker_view" />
 
-<img width="200" src="https://user-images.githubusercontent.com/581861/68270186-e29d9680-009f-11ea-943e-50dc511c0858.png"><img width="200" src="https://user-images.githubusercontent.com/581861/68270188-e29d9680-009f-11ea-8729-a1ed7f4befa2.png"><img width="200" src="https://user-images.githubusercontent.com/581861/68270221-f812c080-009f-11ea-9be2-18d5bbf8f3b7.png">
+<img width="300" src="https://user-images.githubusercontent.com/581861/69323562-520faa80-0c8a-11ea-95f1-625314339a56.gif"><img width="300" src="https://user-images.githubusercontent.com/581861/68270188-e29d9680-009f-11ea-8729-a1ed7f4befa2.png">
 
 ## Getting Started
 
