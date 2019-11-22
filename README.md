@@ -21,7 +21,7 @@ Import the library via
 import 'package:flutter_simple_sticker_view/flutter_simple_sticker_view.dart';
 ```
 
-Example :
+### Example
 
 ```dart
 FlutterSimpleStickerView(
@@ -48,6 +48,16 @@ FlutterSimpleStickerView(
     ],
   )
 ```
+
+### Export Image
+
+```
+var _stickerView = FlutterSimpleStickerView(...);
+
+Uint8List image = await _stickerView.exportImage();
+```
+
+See the [example](https://github.com/myriky/flutter_simple_sticker_view/tree/master/example) :)
 
 ---
 
