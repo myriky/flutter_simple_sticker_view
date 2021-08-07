@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:typed_data';
 import 'dart:ui';
 
@@ -10,7 +11,7 @@ class FlutterSimpleStickerView extends StatefulWidget {
   FlutterSimpleStickerView(
     this.source,
     this.stickerList, {
-    Key key,
+    Key? key,
     this.stickerSize = 100.0,
     this.stickerMaxScale = 2.0,
     this.stickerMinScale = 0.5,
@@ -56,7 +57,7 @@ class FlutterSimpleStickerView extends StatefulWidget {
 class _FlutterSimpleStickerViewState extends State<FlutterSimpleStickerView> {
   _FlutterSimpleStickerViewState();
 
-  Size viewport;
+  Size? viewport;
 
   List<FlutterSimpleStickerImage> attachedList = [];
 
@@ -103,7 +104,7 @@ class _FlutterSimpleStickerViewState extends State<FlutterSimpleStickerView> {
         ),
         Scrollbar(
           child: DragTarget(
-            builder: (BuildContext context, List<String> candidateData,
+            builder: (BuildContext context, List<String?> candidateData,
                 List<dynamic> rejectedData) {
               return Container(
                   padding:
@@ -138,10 +139,10 @@ class _FlutterSimpleStickerViewState extends State<FlutterSimpleStickerView> {
   }
 
   Future<Uint8List> exportImage() async {
-    RenderRepaintBoundary boundary = key.currentContext.findRenderObject();
+    RenderRepaintBoundary boundary = key.currentContext!.findRenderObject() as RenderRepaintBoundary;
     var image =
         await boundary.toImage(pixelRatio: this.widget.devicePixelRatio);
-    var byteData = await image.toByteData(format: ImageByteFormat.png);
+    var byteData = await (image.toByteData(format: ImageByteFormat.png) as FutureOr<ByteData>);
     var pngBytes = byteData.buffer.asUint8List();
 
     return pngBytes;

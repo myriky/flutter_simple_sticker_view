@@ -10,7 +10,7 @@ typedef StickeImageRemoveCallback = void Function(
 class FlutterSimpleStickerImage extends StatefulWidget {
   FlutterSimpleStickerImage(
     this.image, {
-    Key key,
+    Key? key,
     this.width,
     this.height,
     this.viewport,
@@ -20,14 +20,14 @@ class FlutterSimpleStickerImage extends StatefulWidget {
   }) : super(key: key);
 
   final Image image;
-  final double width;
-  final double height;
-  final Size viewport;
+  final double? width;
+  final double? height;
+  final Size? viewport;
 
   final double minScale;
   final double maxScale;
 
-  final StickeImageRemoveCallback onTapRemove;
+  final StickeImageRemoveCallback? onTapRemove;
 
   final _FlutterSimpleStickerImageState _flutterSimpleStickerImageState =
       _FlutterSimpleStickerImageState();
@@ -72,7 +72,7 @@ class _FlutterSimpleStickerImageState extends State<FlutterSimpleStickerImage> {
   Widget build(BuildContext context) {
     return Positioned.fromRect(
       rect: Rect.fromPoints(Offset(_offset.dx, _offset.dy),
-          Offset(_offset.dx + widget.width, _offset.dy + widget.height)),
+          Offset(_offset.dx + widget.width!, _offset.dy + widget.height!)),
       child: Container(
         child: Stack(
           children: <Widget>[
@@ -105,11 +105,11 @@ class _FlutterSimpleStickerImageState extends State<FlutterSimpleStickerImage> {
                     Offset __offset =
                         details.focalPoint - (normalizedOffset * _scale);
 
-                    __offset = Offset(max(__offset.dx, -widget.width),
-                        max(__offset.dy, -widget.height));
+                    __offset = Offset(max(__offset.dx, -widget.width!),
+                        max(__offset.dy, -widget.height!));
 
-                    __offset = Offset(min(__offset.dx, widget.viewport.width),
-                        min(__offset.dy, widget.viewport.height));
+                    __offset = Offset(min(__offset.dx, widget.viewport!.width),
+                        min(__offset.dy, widget.viewport!.height));
 
                     setState(() {
                       _offset = __offset;
@@ -149,7 +149,7 @@ class _FlutterSimpleStickerImageState extends State<FlutterSimpleStickerImage> {
                         onPressed: () {
                           print('tapped remove sticker');
                           if (this.widget.onTapRemove != null) {
-                            this.widget.onTapRemove(this.widget);
+                            this.widget.onTapRemove!(this.widget);
                           }
                         },
                       ),

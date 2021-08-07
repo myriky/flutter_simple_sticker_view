@@ -1,18 +1,18 @@
 name: flutter_simple_sticker_view
 description: A new flutter plugin project for attach stickers on image, as you want. attached image can also be export.
 
-version: 1.0.0
+version: 1.0.1
 author: Chul-won Kim <riky@myriky.net>
 homepage: https://github.com/myriky/flutter_simple_sticker_view
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  vector_math: ^2.0.8
+  vector_math: ^2.1.0
 
 dev_dependencies:
   flutter_test:
